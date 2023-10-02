@@ -4,10 +4,10 @@ function initMap() {
 
     // Utwórz mapę Google
     const map = new google.maps.Map(document.querySelector('#map'), {
-        center: MapConfig.mapPos,
+        center: MapConfig.pos,
         zoom: MapConfig.zoom, // Poziom przybliżenia
         maxZoom: MapConfig.maxZoom,
-        streetViewControl: MapConfig.streetView,
-        fullscreenControl: MapConfig.fullscreenOpt
+        streetViewControl: MapConfig.streetViewControl,
+        fullscreenControl: MapConfig.fullscreenControl
     });
 }

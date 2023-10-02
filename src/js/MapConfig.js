@@ -1,13 +1,11 @@
-const MapConfig = {
-    mapPos: {
+class MapConfig {
+    static pos = {
         lat: 50.566567435153466,
         lng: 19.535605051740568
-    },
-    zoom: 10,
-    maxZoom: 15,
-    streetView: false,
-    fullscreenOpt: false,
-    getMapPos() {
-        return this.mapPos;
-    }
-};
+    };
+    static zoom = 10;
+    static maxZoom = 15;
+    static streetViewControl = false;
+    static fullscreenControl= false;
+
+}
