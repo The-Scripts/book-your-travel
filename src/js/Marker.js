@@ -4,4 +4,4 @@ class Marker {
         this.title = title;
         this.label = label;
     }
-};
+}
