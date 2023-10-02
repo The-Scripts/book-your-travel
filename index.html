@@ -8,7 +8,7 @@
 	<meta name="keywords" content="travel, booking, map">
 	<meta name="author" content="Patryk Ruzicki, Łukasz Stępień">
 	
-	<link href="css/style.css" rel="stylesheet">
+	<link href="src/css/style.css" rel="stylesheet">
 </head>
 <body id="top">
     <header>
@@ -18,7 +18,7 @@
         <nav>
 			<ol>
 				<li><a id="current" href="#">Strona główna</a></li>
-				<li><a href="html/login.html">Mój profil</a></li>
+				<li><a href="src/html/login.html">Mój profil</a></li>
 				<li><a href="php/register.php">Rejestracja</a></li>
 			</ol>
 		</nav>
@@ -36,5 +36,8 @@
     <footer>
         <p>Stronę stworzono w 2023r.</p><p><a href="#top">Do poczatku strony</a></p>
     </footer>
+    <script src="src/js/map/InitMap.js"></script>
+    <script src="src/js/map/MapConfig.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArOqv9NG801HCf95yDLXh-YD0mxpASzhA&callback=initMap" async defer></script>
 </body>
 </html>
