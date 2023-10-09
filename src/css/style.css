@@ -3,8 +3,9 @@
     --bgc: #fff;
     --altbgc: #424861;
     --map: #535979;
+    --altmap: #9EA3BD;
     --a: #EF8354;
-    --current: #EF8354;
+    --special: #B68F40;
 }
 
 * {
@@ -53,12 +54,13 @@ a {
 
 a:hover {
     transition: 0.5s;
+    text-decoration: underline;
     color: var(--a);
 }
 
 #current {
     text-decoration: none;
-    color: var(--current);
+    color: var(--a);
     font-weight: bold;
 }
 
@@ -95,6 +97,65 @@ footer {
     font-size: 14px;
     padding: 10px 15px;
     position: relative;
+}
+
+#back_form {
+    width: 500px;
+    height: 205px;
+    background-color: var(--bgc);
+    margin: 50px auto;
+    border-radius: 10px;
+    color: var(--main);
+    font-size: large;
+}
+input, label{
+    margin: 5px 15px;
+    width: 200px;
+    height: 20px;
+    color: var(--main);
+    padding: 2px 5px;
+}
+
+input {
+    border-radius: 2px;
+    border: none;
+    background-color: var(--altmap);
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    width: 211px;
+    height: 25px;
+    font-weight: bold;
+    background-color: var(--special);
+    border-radius: 5px;
+    border: none;
+    opacity: 100%;
+}
+
+input[type="submit"]:hover {
+    opacity: 90%;
+}
+
+fieldset {
+    margin: 15px;
+    padding: 5px;
+    height: 180px;
+    border-radius: 7px;
+    border: var(--altbgc) solid 1px;
+}
+
+legend {
+    margin-left: 10px;
+    padding: 0 5px;
+    font-weight: bold;
+    font-size: 24px;
+    color: var(--main);
+}
+
+td {
+    width: 400px;
+    text-align: right;
 }
 
 @media screen and (max-width: 768px) {
