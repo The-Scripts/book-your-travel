@@ -84,7 +84,7 @@ main section #map {
 }
 
 .price {
-    padding: 1px 8px;
+    padding: 1px 2px;
     border-radius: 3px;
     background-color: var(--bgc);
     font-weight: bold;
