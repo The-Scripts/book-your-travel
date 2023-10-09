@@ -1,11 +1,8 @@
 <?php
-require_once "db/DatabaseQuery.php";
+require_once "db/DatabaseConn.php";
 
-$query = new db\DatabaseQuery();
-$result = $query->selectOffers();
+$conn = new db\DatabaseConn();
+$result = $conn->query("SELECT * FROM offers", true);
 
-
-
-// Output the markers data as JSON
 header('Content-Type: application/json');
 echo json_encode($result);
