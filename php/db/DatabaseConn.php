@@ -40,13 +40,11 @@ class DatabaseConn extends DatabaseConfig
         return $this->pdo;
     }
 
-    protected function query($statement, $allRows = false, $oneRows = false)
+    public function query($statement, $getRows = false)
     {
         try {
-            if ($allRows) {
+            if ($getRows) {
                 return $this->getConn()->query($statement)->fetchAll(PDO::FETCH_ASSOC);
-            } elseif ($oneRows) {
-                return $this->getConn()->query($statement)->fetch(PDO::FETCH_ASSOC);
             } else {
                 $this->getConn()->query($statement);
             }
@@ -55,5 +53,4 @@ class DatabaseConn extends DatabaseConfig
             echo $e->getMessage();
         }
     }
-
 }
