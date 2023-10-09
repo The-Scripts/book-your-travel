@@ -7,4 +7,5 @@ class DatabaseConfig
     protected static $username = "root";
     protected static $password = "";
     protected static $database = "db";
+    protected static $charset = "UTF8";
 }
