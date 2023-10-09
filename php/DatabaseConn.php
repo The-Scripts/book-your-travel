@@ -19,6 +19,12 @@ class DatabaseConn extends DatabaseConfig
         }
 
     }
+
+    public function __destruct()
+    {
+        unset($this->pdo);
+    }
+
     private function getDsn() {
         $host = DatabaseConfig::$servername;
         $dbname = DatabaseConfig::$database;
