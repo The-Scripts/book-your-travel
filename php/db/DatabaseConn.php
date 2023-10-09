@@ -40,7 +40,7 @@ class DatabaseConn extends DatabaseConfig
         return $this->pdo;
     }
 
-    public function query($statement, $getRows = false)
+    public function query(string $statement, bool $getRows = false)
     {
         try {
             if ($getRows) {
