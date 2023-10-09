@@ -15,6 +15,6 @@ class DatabaseQuery extends DatabaseConn
     }
 
     public function selectOffers() {
-        $this->conn->query("SELECT * FROM offers", allRows: true);
+        return $this->conn->query("SELECT * FROM offers", allRows: true);
     }
 }
