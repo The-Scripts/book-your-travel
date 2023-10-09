@@ -6,20 +6,24 @@ async function initMap() {
     const map = new Map(document.querySelector('#map'), {
         mapId: MapConfig.mapId,
         center: MapConfig.pos,
-        zoom: MapConfig.zoom, // Poziom przybliżenia
+        zoom: MapConfig.zoom,
         maxZoom: MapConfig.maxZoom,
         streetViewControl: MapConfig.streetViewControl,
         fullscreenControl: MapConfig.fullscreenControl
     });
 
-    for (let i = 0; i < MapConfig.labelMarkers.length; i++) {
+    // Fetch the markers data from the PHP script
+    const response = await fetch('../../../php/markers.php');
+    console.log(response);
+
+    const data = await response.json();
+    for (let i = 0; i < data.length; i++) {
         const marker = document.createElement('div');
         marker.className = 'marker';
-        marker.textContent = MapConfig.labelMarkers[i];
+        marker.textContent = data[i].label;
         markers[i] = new AdvancedMarkerElement({
-            position: MapConfig.posMarkers[i],
+            position: { lat: parseFloat(data[i].lat), lng: parseFloat(data[i].lng) },
             map: map,
             content: marker
         })
-    }
-}
+    }}
