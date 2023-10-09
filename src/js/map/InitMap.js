@@ -13,7 +13,9 @@ async function initMap() {
     });
 
     // Fetch the markers data from the PHP script
-    const response = await fetch('../../../php/Markers.php');
+    const response = await fetch('../../../php/markers.php');
+    console.log(response);
+
     const data = await response.json();
     for (let i = 0; i < data.length; i++) {
         const marker = document.createElement('div');

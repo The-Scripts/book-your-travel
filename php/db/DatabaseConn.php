@@ -3,17 +3,19 @@
 namespace db;
 
 use PDO;
-
+use PDOException;
+require_once "DatabaseConfig.php";
 class DatabaseConn extends DatabaseConfig
 {
     private $pdo;
+
     public function __construct()
     {
         try {
 
-            $this->pdo = new \PDO($this->getDsn(), DatabaseConfig::$username, DatabaseConfig::$password);
-            $this->pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
-        } catch (\PDOException $e) {
+            $this->pdo = new PDO($this->getDsn(), DatabaseConfig::$username, DatabaseConfig::$password);
+            $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (PDOException $e) {
             echo "Database error<br>";
             echo $e->getMessage();
         }
@@ -25,17 +27,21 @@ class DatabaseConn extends DatabaseConfig
         unset($this->pdo);
     }
 
-    private function getDsn() {
+    private function getDsn(): string
+    {
         $host = DatabaseConfig::$servername;
         $dbname = DatabaseConfig::$database;
         $charset = DatabaseConfig::$charset;
         return "mysql:host=$host; dbname=$dbname; charset=$charset";
     }
-    protected function getConn() {
+
+    protected function getConn(): PDO
+    {
         return $this->pdo;
     }
 
-    protected function query($statement, $allRows = false, $oneRows = false) {
+    protected function query($statement, $allRows = false, $oneRows = false)
+    {
         try {
             if ($allRows) {
                 return $this->getConn()->query($statement)->fetchAll(PDO::FETCH_ASSOC);
@@ -44,7 +50,7 @@ class DatabaseConn extends DatabaseConfig
             } else {
                 $this->getConn()->query($statement);
             }
-        } catch (\PDOException $e) {
+        } catch (PDOException $e) {
             echo "Query error<br>";
             echo $e->getMessage();
         }
