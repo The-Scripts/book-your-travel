@@ -1,7 +1,6 @@
 async function initMap() {
     const { Map } = await google.maps.importLibrary("maps");
     const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
-    let markers = [];
 
     const map = new Map(document.querySelector('#map'), {
         mapId: MapConfig.mapId,
@@ -12,18 +11,19 @@ async function initMap() {
         fullscreenControl: MapConfig.fullscreenControl
     });
 
-    // Fetch the markers data from the PHP script
     const response = await fetch('../../../php/markers.php');
-    console.log(response);
+    const markersData = await response.json();
+    console.log(markersData);
 
-    const data = await response.json();
-    for (let i = 0; i < data.length; i++) {
+    for (let i = 0; i < markersData.length; i++) {
         const marker = document.createElement('div');
         marker.className = 'marker';
-        marker.textContent = data[i].label;
-        markers[i] = new AdvancedMarkerElement({
-            position: { lat: parseFloat(data[i].lat), lng: parseFloat(data[i].lng) },
+        marker.innerHTML = `${markersData[i].Title} <span class="price">${markersData[i].Price} PLN</span><br>
+                            ${markersData[i].StartDate} → ${markersData[i].EndDate}`;
+        new AdvancedMarkerElement({
+            position: { lat: parseFloat(markersData[i].Latitude), lng: parseFloat(markersData[i].Longitude) },
             map: map,
             content: marker
-        })
-    }}
+        });
+    }
+ }

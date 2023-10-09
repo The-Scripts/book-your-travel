@@ -83,13 +83,6 @@ main section #map {
     margin: 20px;
 }
 
-footer {
-    background-color: var(--main);
-    color: var(--bgc);
-    text-align: center;
-    padding: 10px 0;
-}
-
 .marker {
     background-color: var(--main);
     border-radius: 8px;
@@ -97,6 +90,22 @@ footer {
     font-size: 14px;
     padding: 10px 15px;
     position: relative;
+    line-height: 1.5;
+}
+
+.price {
+    padding: 1px 2px;
+    border-radius: 3px;
+    background-color: var(--bgc);
+    font-weight: bold;
+    color: var(--main);
+}
+
+footer {
+    background-color: var(--main);
+    color: var(--bgc);
+    text-align: center;
+    padding: 10px 0;
 }
 
 #back_form {
