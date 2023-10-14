@@ -23,14 +23,27 @@ async function initMap() {
         markers[i] = new AdvancedMarkerElement({
             position: { lat: parseFloat(markersData[i].Latitude), lng: parseFloat(markersData[i].Longitude) },
             map: map,
-            content: marker
+            content: marker,
+            title: `${i+1}`
         });
         markers[i].addListener('click', (evt) => {
+            console.log(markers[i].title);
             popupSection.classList.remove('hide');
             markers.forEach((el) => el.zIndex = 0);
             map.setZoom(11);
             map.setCenter(markers[i].position)
             markers[i].zIndex = 1;
+
+            fetch('../../../php/popUp.php', {
+                method: 'POST',
+                body: JSON.stringify({id: `${i}`}),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then(response => response.json())
+                .then(responseJson => {console.log(responseJson)})
+
         })
     }
  }
