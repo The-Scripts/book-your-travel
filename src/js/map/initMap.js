@@ -1,7 +1,7 @@
 async function initMap() {
     const { Map } = await google.maps.importLibrary("maps");
     const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
-
+    const popupSection = document.querySelector('#pop-up');
     const map = new Map(document.querySelector('#map'), {
         mapId: MapConfig.mapId,
         center: MapConfig.pos,
@@ -26,6 +26,7 @@ async function initMap() {
             content: marker
         });
         markers[i].addListener('click', (evt) => {
+            popupSection.classList.remove('hide');
             markers.forEach((el) => el.zIndex = 0);
             map.setZoom(11);
             map.setCenter(markers[i].position)

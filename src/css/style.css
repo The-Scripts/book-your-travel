@@ -167,6 +167,10 @@ td {
     text-align: right;
 }
 
+.hide {
+    display: none !important;
+}
+
 @media screen and (max-width: 768px) {
     header {
         flex-direction: column;
