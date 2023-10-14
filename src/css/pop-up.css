@@ -23,8 +23,12 @@ section img {
     object-fit: cover;
 }
 
-#pop-up-photo {
+#pop-up-photo-article {
     width: 20%;
+}
+
+#pop-up-image {
+    border-radius: 15px 0 0 15px;
 }
 
 #pop-up-description {
@@ -43,9 +47,9 @@ section img {
     border-radius: 0 15px 15px 0;
 }
 
-#pop-up-price a{
+#pop-up-price a {
     color: var(--a);
-    margin-top: 4px;
+    margin-top: 5px;
 }
 
 
@@ -60,7 +64,8 @@ section img {
     font-size: 16px;
 }
 
-#city-pop-up {
+#description-para-pop-up {
     margin: 5px 0 4px 15px;
     font-size: 16px;
+    text-overflow: ellipsis;
 }
