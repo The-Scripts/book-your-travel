@@ -4,7 +4,9 @@ async function initMap() {
     const popupSection = document.querySelector('#pop-up');
     const popupTitle = document.querySelector('#title-pop-up');
     const popupDate = document.querySelector('#date-pop-up');
-    const popupCity = document.querySelector('#city-pop-up');
+    const popupDescription = document.querySelector('#description-para-pop-up');
+    const popupPrice = document.querySelector('#price-value-pop-up');
+    const popupImg = document.querySelector('#pop-up-image');
 
     const map = new Map(document.querySelector('#map'), {
         mapId: MapConfig.mapId,
@@ -30,6 +32,7 @@ async function initMap() {
             content: marker,
             title: `${i+1}`
         });
+
         markers[i].addListener('click', async evt => {
             fetch('../../../php/popUp.php', {
                 method: 'POST',
@@ -40,11 +43,24 @@ async function initMap() {
             })
                 .then(response => response.json())
                 .then(responseJson => {
-                    console.log(responseJson);
                     popupTitle.textContent = responseJson[0]['Title'];
                     popupDate.textContent = responseJson[0]['StartDate'] + ' → ' + responseJson[0]['EndDate'];
+                    popupDescription.textContent = responseJson[0]['Description'];
+                    popupPrice.textContent = responseJson[0]['Price'] + " PLN";
                 })
-            console.log(markers[i].title);
+
+            fetch('../../../php/popUpImage.php', {
+                method: 'POST',
+                body:JSON.stringify({id: `${i+1}`}),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then(response => response.json())
+                .then(responseJson => {
+                    popupImg.setAttribute('src', `${responseJson[0]['Image']}`);
+                })
+
             popupSection.classList.remove('hide');
             markers.forEach((el) => el.zIndex = 0);
             map.setZoom(11);
