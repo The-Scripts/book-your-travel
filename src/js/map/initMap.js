@@ -2,6 +2,10 @@ async function initMap() {
     const { Map } = await google.maps.importLibrary("maps");
     const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
     const popupSection = document.querySelector('#pop-up');
+    const popupTitle = document.querySelector('#title-pop-up');
+    const popupDate = document.querySelector('#date-pop-up');
+    const popupCity = document.querySelector('#city-pop-up');
+
     const map = new Map(document.querySelector('#map'), {
         mapId: MapConfig.mapId,
         center: MapConfig.pos,
@@ -26,7 +30,20 @@ async function initMap() {
             content: marker,
             title: `${i+1}`
         });
-        markers[i].addListener('click', (evt) => {
+        markers[i].addListener('click', async evt => {
+            fetch('../../../php/popUp.php', {
+                method: 'POST',
+                body: JSON.stringify({id: `${i+1}`}),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then(response => response.json())
+                .then(responseJson => {
+                    console.log(responseJson);
+                    popupTitle.textContent = responseJson[0]['Title'];
+                    popupDate.textContent = responseJson[0]['StartDate'] + ' → ' + responseJson[0]['EndDate'];
+                })
             console.log(markers[i].title);
             popupSection.classList.remove('hide');
             markers.forEach((el) => el.zIndex = 0);
@@ -34,15 +51,7 @@ async function initMap() {
             map.setCenter(markers[i].position)
             markers[i].zIndex = 1;
 
-            fetch('../../../php/popUp.php', {
-                method: 'POST',
-                body: JSON.stringify({id: `${i}`}),
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            })
-                .then(response => response.json())
-                .then(responseJson => {console.log(responseJson)})
+
 
         })
     }
