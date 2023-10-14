@@ -9,6 +9,7 @@
 	<meta name="author" content="Patryk Ruzicki, Łukasz Stępień">
 	
 	<link href="src/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/pop-up.css">
 </head>
 <body id="top">
     <header>
@@ -27,9 +28,22 @@
         <section id="banner">
             <img src="res/img/banner.png" alt="baner">
         </section>
-        <section>
-            <div id="map">
-            </div>
+        <section id="section-map">
+            <div id="map"></div>
+            <section id="pop-up" class="hide">
+                <article id="pop-up-photo">
+                    <img src="res/img/logo.png">
+                </article>
+                <article id="pop-up-description">
+                    <p id="title-pop-up">Title</p>
+                    <p id="date-pop-up">Date</p>
+                    <p id="city-pop-up">City</p>
+                </article>
+                <article id="pop-up-price">
+                    <p class="price">1500 PLN</p>
+                    <a>Book</a>
+                </article>
+            </section>
         </section>
     </main>
     <footer>

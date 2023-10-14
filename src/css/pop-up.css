@@ -1,0 +1,66 @@
+#section-map {
+    position: relative;
+}
+
+#pop-up {
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 60vw;
+    min-width: 250px;
+    position: absolute;
+    bottom: 20px; /* Adjust the distance from the bottom as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--altbgc);
+    color: white;
+    border-radius: 15px;
+}
+
+section img {
+    height: 100px;
+    width: 100%;
+    object-fit: cover;
+}
+
+#pop-up-photo {
+    width: 20%;
+}
+
+#pop-up-description {
+    width: 60%;
+    text-align: left;
+}
+
+#pop-up-price {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main);
+    border-radius: 0 15px 15px 0;
+}
+
+#pop-up-price a{
+    color: var(--a);
+    margin-top: 4px;
+}
+
+
+#title-pop-up {
+    margin: 15px 0 4px 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#date-pop-up {
+    margin: 5px 0 4px 15px;
+    font-size: 16px;
+}
+
+#city-pop-up {
+    margin: 5px 0 4px 15px;
+    font-size: 16px;
+}
