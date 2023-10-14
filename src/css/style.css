@@ -91,6 +91,7 @@ main section #map {
     padding: 10px 15px;
     position: relative;
     line-height: 1.5;
+    border: 2px white solid;
 }
 
 .price {
