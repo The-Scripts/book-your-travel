@@ -1,0 +1,68 @@
+:root {
+    --main: #2D3142;
+    --bgc: #fff;
+    --altbgc: #424861;
+    --map: #535979;
+    --altmap: #9EA3BD;
+    --a: #EF8354;
+    --special: #B68F40;
+}
+
+#sub_menu {
+    background-color: var(--map);
+}
+
+.trip {
+    display: flex;
+    border: 2px solid var(--map);
+    width: 350px;
+    height: 400px;
+    border-radius: 10px;
+    margin: 50px;
+    padding: 10px;
+}
+
+.photo {
+    width: 200px;
+    height: 120px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 0 10px;
+    float: left;
+}
+
+.photo img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 5px;
+}
+
+.content {
+    margin: 0 10px;
+    width: 300px;
+    height: 80px;
+    float: left;
+}
+
+.content h3 {
+    color: var(--bgc);
+    font-size: 18px;
+}
+
+.content hr {
+    border: 1px solid var(--altmap);
+}
+
+.description {
+    color: var(--altmap);
+    overflow: auto;
+    float: left;
+}
+
+.trip_date {
+    color: var(--special);
+}
+
+.content::-webkit-scrollbar{
+	width: 7px;
+}

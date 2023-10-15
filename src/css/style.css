@@ -16,6 +16,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: var(--altbgc);
+    overflow: hidden;
 }
 
 header {
@@ -113,11 +114,17 @@ footer {
     width: 500px;
     height: 205px;
     background-color: var(--bgc);
-    margin: 50px auto;
+    margin: 165px auto;
     border-radius: 10px;
     color: var(--main);
     font-size: large;
 }
+
+form{
+    width: 100%;
+    height: 100%;
+}
+
 input, label{
     margin: 5px 15px;
     width: 200px;
@@ -170,6 +177,34 @@ td {
 
 .hide {
     display: none !important;
+}
+
+div a div img{
+    opacity: 10%;
+}
+
+::-webkit-scrollbar{
+	width: 11px;
+	height: 11px;
+}
+::-webkit-scrollbar-track{
+	opacity: 0%;
+	background: none;
+}
+::-webkit-scrollbar-thumb{
+	background: #757885;
+	border-radius: 100vw;
+	opacity: 0%;
+}
+::-webkit-scrollbar-thumb:hover{
+	background: #858896;
+}
+@supports (scrollbar-color: red blue){
+	*{
+		scrollbar-color: #757885;
+		scrollbar-width: 12px;
+		/* scrollbar-color: silver #878787; */
+	}
 }
 
 @media screen and (max-width: 768px) {
