@@ -188,8 +188,8 @@ div a div img{
 	height: 11px;
 }
 ::-webkit-scrollbar-track{
-	opacity: 0%;
-	background: none;
+	opacity: 90%;
+    background-color: #414455;
 }
 ::-webkit-scrollbar-thumb{
 	background: #757885;
