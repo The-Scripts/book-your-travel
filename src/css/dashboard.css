@@ -12,6 +12,38 @@
     background-color: var(--map);
 }
 
+button {
+    width: 200px;
+    height: 50px;
+    background-color: var(--map);
+    border: 3px solid var(--main);
+    border-radius: 25px;
+    text-align: center;
+    color: var(--main);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+button:hover {
+    border: 2px solid var(--bgc);
+    font-weight: 300;
+    color: var(--bgc);
+}
+
+button:active {
+    background-color: var(--altbgc);
+}
+
+#upcoming {
+    margin-left: auto;
+    margin-right: 25px;
+}
+
+#previous {
+    margin-right: auto;
+    margin-left: 25px;
+}
+
 .trip {
     display: block;
     border: 2px solid var(--map);
@@ -76,3 +108,12 @@
 	opacity: 0%;
     background: none;
 }
+
+@media (max-width: 768px) {
+    /* Stylizacja dla ekranów o szerokości do 768px */
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    /* Stylizacja dla ekranów o szerokości od 769px do 1024px */
+  }
+  
