@@ -108,12 +108,3 @@ button:active {
 	opacity: 0%;
     background: none;
 }
-
-@media (max-width: 768px) {
-    /* Stylizacja dla ekranów o szerokości do 768px */
-  }
-  
-  @media (min-width: 769px) and (max-width: 1024px) {
-    /* Stylizacja dla ekranów o szerokości od 769px do 1024px */
-  }
-  
