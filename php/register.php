@@ -16,6 +16,22 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     die("Invalid email address.");
 }
 
+// Check if the email already exists in the database
+$check_email_query = "SELECT users.Email FROM users;";
+$equal = $mysqli -> query($check_email_query);
+$num_of_email = $equal -> num_rows;
+$email_count = 0;
+
+for($i = 0; $i < $num_of_email; $i++){
+    $row = $equal -> fetch_assoc();
+    if($row['Email'] == $email)
+        $email_count++;
+}
+
+if ($email_count > 0) {
+    die("Email already exists. Please use a different email address.");
+}
+
 // Check if the password and repeated password match
 if ($password !== $repeat_password) {
     die("Passwords do not match.");
