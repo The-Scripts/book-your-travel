@@ -43,6 +43,43 @@
                     
                 </div>
             </div> -->
+            <?php
+            $mysqli = new mysqli("localhost", "root", "", "db");
+
+            if ($mysqli->connect_error) {
+                die("Connection failed: " . $mysqli->connect_error);
+            }
+
+            // Query to retrieve the trips for the logged-in user
+            $query = "SELECT * FROM trips WHERE user_id = ?";
+            $stmt = $mysqli->prepare($query);
+            $stmt->bind_param("i", $user_id);
+            $stmt->execute();
+            $result = $stmt->get_result();
+
+            while ($row = $result->fetch_assoc()) {
+                $trip_id = $row['trip_id'];
+                $title = $row['title'];
+                $description = $row['description'];
+                $photo_url = $row['photo_url'];
+
+                echo '<div class="trip">';
+                echo '<div class="photo">';
+                echo '<img src="' . $photo_url . '" alt="' . $title . '">';
+                echo '</div>';
+                echo '<div class="content">';
+                echo '<h3 class="title">' . $title . '</h3>';
+                echo '<hr>';
+                echo '<p class="trip_date">' . $description . '</p>';
+                echo '</div>';
+                echo '<div class="description">';
+                echo '</div>';
+                echo '</div>';
+            }
+
+            $mysqli->close();
+            ?>
+
         </section>
     </main>
     <footer>
