@@ -30,22 +30,19 @@
             <button id="previous">Zakończone</button>
         </header>
         <section>
-            <div class="trip">
+            <!-- <div class="trip">
                 <div class="photo">
-                    <img src="../res/img/zdj.png" alt="Mirów Fotka">
+                    <img src="" alt="">
                 </div>
                 <div class="content">
-                    <h3>| Wycieczka wspinaczkowa | Mirów</h3>
+                    <h3 class="title"></h3>
                     <hr>
-                    <p class="trip_date">06.10.2023 - 22.12.2023</p>
+                    <p class="trip_date"></p>
                 </div>
                 <div class="description">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor error, enim, iure deleniti ut neque atque, deserunt consectetur molestias itaque soluta blanditiis animi nulla sunt culpa repellendus tempore? Officia, deleniti.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor error, enim, iure deleniti ut neque atque, deserunt consectetur molestias itaque soluta blanditiis animi nulla sunt culpa repellendus tempore? Officia, deleniti.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor error, enim, iure deleniti ut neque atque, deserunt consectetur molestias itaque soluta blanditiis animi nulla sunt culpa repellendus tempore? Officia, deleniti.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor error, enim, iure deleniti ut neque atque, deserunt consectetur molestias itaque soluta blanditiis animi nulla sunt culpa repellendus tempore? Officia, deleniti.</p>
+                    
                 </div>
-            </div>
+            </div> -->
         </section>
     </main>
     <footer>
