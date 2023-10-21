@@ -179,10 +179,6 @@ td {
     display: none !important;
 }
 
-div a div img{
-    opacity: 10%;
-}
-
 ::-webkit-scrollbar{
 	width: 11px;
 	height: 11px;
