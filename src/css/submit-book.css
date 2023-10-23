@@ -1,0 +1,37 @@
+#submit-book-sect {
+    left: 25%;
+    top: 10%;
+    z-index: 1;
+    position: fixed;
+    width: 50%;
+    height: 80%;
+    background-color: var(--map);
+    border-radius: 10px;
+    color: white;
+}
+
+#submit-book-sect img {
+    position: relative;
+    left: 5%;
+    width: 90%;
+    height: 50%;
+    border-radius: 10px;
+}
+
+#submit-book-sect form {
+    width: 100%;
+}
+
+#submit-book-sect input {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 90%;
+    left: 5%;
+    bottom: -15%;
+    height: 40px;
+}
+
+#submit-book-sect p, #submit-book-sect h1 {
+    margin: 15px 5%;
+}

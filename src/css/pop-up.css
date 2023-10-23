@@ -17,7 +17,7 @@
     border-radius: 15px;
 }
 
-section img {
+#section-map img {
     height: 100px;
     width: 100%;
     object-fit: cover;
@@ -37,21 +37,23 @@ section img {
 }
 
 #pop-up-price {
-    width: 20%;
-    height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
-    justify-content: center;
+    width: 20%;
+    height: 100%;
     background-color: var(--main);
     border-radius: 0 15px 15px 0;
 }
 
 #pop-up-price a {
     color: var(--a);
-    margin-top: 5px;
 }
 
+#pop-up-price button {
+    width: 90%;
+}
 
 #title-pop-up {
     margin: 15px 0 4px 15px;
@@ -68,4 +70,8 @@ section img {
     margin: 5px 0 4px 15px;
     font-size: 16px;
     text-overflow: ellipsis;
+}
+
+#book-travel {
+    width: 80%;
 }
