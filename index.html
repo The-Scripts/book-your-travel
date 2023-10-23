@@ -29,14 +29,20 @@
         <section id="banner">
             <img src="res/img/banner.png" alt="baner">
         </section>
-        <section id="submit-book-sect">
-            
+        <section id="submit-book-sect" class="hide">
+            <h1 id="submit-book-title">Title</h1>
+            <p id="submit-book-date">Date</p>
+            <img src="res/img/logo.png" alt="Image">
+            <p id="submit-book-description">Description</p>
+            <form action="" method="post">
+                <input type="submit" value="Book">
+            </form>
         </section>
         <section id="section-map">
             <div id="map"></div>
             <section id="pop-up" class="hide">
                 <article id="pop-up-photo-article">
-                    <img id="pop-up-image" src="res/img/logo.png">
+                    <img id="pop-up-image" src="res/img/logo.png" alt="Image">
                 </article>
                 <article id="pop-up-description">
                     <p id="title-pop-up">Title</p>
@@ -44,11 +50,8 @@
                     <p id="description-para-pop-up">City</p>
                 </article>
                 <article id="pop-up-price">
-                    <form action="" method="post">
                         <p id="price-value-pop-up" class="price">1500 PLN</p>
-
-                        <input id="book-travel" type="submit" value="Book">
-                    </form>
+                        <button>Book</button>
                 </article>
             </section>
         </section>
