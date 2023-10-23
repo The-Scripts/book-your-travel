@@ -1,5 +1,9 @@
 <?php
     session_start();
+
+    if(!(isset($_SESSION['user_id'])) && !($_SESSION['user_email'])){
+        header("Location: login.php");
+    }
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -17,7 +21,7 @@
 <body id="top" style="overflow: auto;">
     <header>
         <div id="logo">
-            <img src="../res/img/logo.png" alt="Logo Book your travel">
+            <a href="../index.html"><img src="../res/img/logo.png" alt="Logo Book your travel"></a>
         </div>
         <nav>
 			<ol>
