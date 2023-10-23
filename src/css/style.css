@@ -195,12 +195,13 @@ td {
 }
 
 ::-webkit-scrollbar{
-	width: 11px;
-	height: 11px;
+	width: 12px;
 }
-::-webkit-scrollbar-track{
-	opacity: 90%;
-    background-color: #414455;
+body::-webkit-scrollbar-track{
+    background-color: var(--map);
+}
+body::-webkit-scrollbar-thumb{
+    border: var(--map) solid 1px;
 }
 ::-webkit-scrollbar-thumb{
 	background: #757885;
@@ -219,22 +220,8 @@ td {
 }
 
 @media screen and (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    #logo img {
-        margin: 10px 0;
-    }
-
     nav {
         margin: 20px 0;
-    }
-
-    nav li {
-        display: block;
-        margin: 10px 0;
     }
 
     main section:last-child {

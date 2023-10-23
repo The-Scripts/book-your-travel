@@ -1,6 +1,5 @@
 <?php
     session_start();
-
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -67,23 +66,25 @@
                 $photo_url = $row['Image'];
 
                 echo '<div class="trip">';
+                echo '<div class="photo">';
                 echo '<img src="' . $photo_url . '" alt="' . $title . '">';
+                echo '</div>';
                 echo '<div class="content">';
                 echo '<h3 class="title">' . $title . '</h3>';
                 echo '<p class="trip_date">' . $trip_start . ' - ' . $trip_end . '</p>';
                 echo '</div>';
                 echo '<div class="description">';
                 echo $description;
-                echo "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora blanditiis quos, itaque saepe facilis, eligendi provident sed exercitationem maxime labore quidem dignissimos laborum voluptas perferendis ipsum. Minus, neque similique! Harum.
-                Modi hic nisi enim. Consequuntur ab necessitatibus provident delectus architecto! Eligendi, excepturi accusantium impedit ipsam quos iusto. Quis qui alias, obcaecati temporibus reiciendis soluta aperiam eligendi quam animi asperiores enim.
-                Dolorum accusantium repudiandae at possimus cum consequatur facere veritatis sit sunt eveniet, corrupti quidem repellat nihil blanditiis cumque doloremque quasi autem harum fugit esse temporibus magni iure? Porro, hic vitae?
-                Similique voluptatem quia corporis soluta. Esse harum excepturi, a ullam aspernatur repudiandae tempore labore commodi, fugiat debitis quis voluptatem. Totam repellat architecto alias recusandae explicabo enim corrupti maxime, quisquam dolorum.
-                Aperiam, aut sunt! Tempora culpa consequatur accusamus, iure vitae maxime quidem quis nostrum aspernatur atque veniam pariatur impedit libero perspiciatis praesentium corrupti, nemo velit harum deleniti nesciunt minus id rem?
-                Placeat molestiae delectus, fugit recusandae optio ratione dicta rerum nam in dolore cumque ipsum commodi quis quos aspernatur culpa nobis dolorem aut, perspiciatis distinctio ea. Veritatis obcaecati voluptatibus deleniti accusantium!
-                Facere, enim laboriosam repellat voluptates pariatur tempora temporibus dolor? Deserunt qui quidem dolorem aut magnam quas numquam quam, sed porro expedita, velit est voluptatem quos dolores quasi veritatis enim maxime.
-                Aliquam, consectetur laudantium. Velit assumenda beatae dolore. Provident dolor, ea blanditiis dolorum eius incidunt molestiae veritatis rem, eveniet culpa quos neque debitis consequuntur. Harum voluptatem placeat reprehenderit, dolores recusandae facilis.
-                Maxime possimus quis dolorum eius explicabo fugit voluptates recusandae minus, error laborum aspernatur distinctio. Officia velit quibusdam aliquid? Laborum sapiente eveniet modi autem quibusdam voluptas alias sed accusantium explicabo cupiditate.
-                Repellat nihil natus doloremque voluptate ipsam esse, ratione provident dolores ea ipsa illo. Non minus est enim quae consequatur harum quisquam natus itaque distinctio doloribus, eveniet possimus culpa earum tenetur!";
+                // echo "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora blanditiis quos, itaque saepe facilis, eligendi provident sed exercitationem maxime labore quidem dignissimos laborum voluptas perferendis ipsum. Minus, neque similique! Harum.
+                // Modi hic nisi enim. Consequuntur ab necessitatibus provident delectus architecto! Eligendi, excepturi accusantium impedit ipsam quos iusto. Quis qui alias, obcaecati temporibus reiciendis soluta aperiam eligendi quam animi asperiores enim.
+                // Dolorum accusantium repudiandae at possimus cum consequatur facere veritatis sit sunt eveniet, corrupti quidem repellat nihil blanditiis cumque doloremque quasi autem harum fugit esse temporibus magni iure? Porro, hic vitae?
+                // Similique voluptatem quia corporis soluta. Esse harum excepturi, a ullam aspernatur repudiandae tempore labore commodi, fugiat debitis quis voluptatem. Totam repellat architecto alias recusandae explicabo enim corrupti maxime, quisquam dolorum.
+                // Aperiam, aut sunt! Tempora culpa consequatur accusamus, iure vitae maxime quidem quis nostrum aspernatur atque veniam pariatur impedit libero perspiciatis praesentium corrupti, nemo velit harum deleniti nesciunt minus id rem?
+                // Placeat molestiae delectus, fugit recusandae optio ratione dicta rerum nam in dolore cumque ipsum commodi quis quos aspernatur culpa nobis dolorem aut, perspiciatis distinctio ea. Veritatis obcaecati voluptatibus deleniti accusantium!
+                // Facere, enim laboriosam repellat voluptates pariatur tempora temporibus dolor? Deserunt qui quidem dolorem aut magnam quas numquam quam, sed porro expedita, velit est voluptatem quos dolores quasi veritatis enim maxime.
+                // Aliquam, consectetur laudantium. Velit assumenda beatae dolore. Provident dolor, ea blanditiis dolorum eius incidunt molestiae veritatis rem, eveniet culpa quos neque debitis consequuntur. Harum voluptatem placeat reprehenderit, dolores recusandae facilis.
+                // Maxime possimus quis dolorum eius explicabo fugit voluptates recusandae minus, error laborum aspernatur distinctio. Officia velit quibusdam aliquid? Laborum sapiente eveniet modi autem quibusdam voluptas alias sed accusantium explicabo cupiditate.
+                // Repellat nihil natus doloremque voluptate ipsam esse, ratione provident dolores ea ipsa illo. Non minus est enim quae consequatur harum quisquam natus itaque distinctio doloribus, eveniet possimus culpa earum tenetur!";
                 echo '</div></div>';
             }
 
