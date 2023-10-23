@@ -76,12 +76,14 @@ img {
 }
 
 main section #map {
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 600px;
     background-color: var(--map);
-    margin: 20px;
+    margin: 15px;
+    box-shadow: #2D3142 0 0 5px;
 }
 
 .marker {
