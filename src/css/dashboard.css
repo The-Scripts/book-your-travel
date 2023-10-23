@@ -43,7 +43,7 @@ button:active {
     gap: 20px;
 }
 
-#upcoming, #previous {
+#upcoming, #previous, #all{
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
@@ -67,13 +67,15 @@ main, section {
 }
 
 .tag{
-    padding: 3px 8px 3px;
-    margin: 0 2px;
-    color: var(--white);
+    padding: 4px 8px 3px 8px;
+    margin: 0 10px;
+    color: var(--bgc);
     font-size: 16px;
-    font-weight: 600;
-    background-color: var(--alt);
-    border-radius: 100px;
+    font-weight: 400;
+    min-width: 100px;
+    max-width: 110px;
+    background-color: var(--main);
+    border-radius: 10px;
 }
 
 .trip h3 {
