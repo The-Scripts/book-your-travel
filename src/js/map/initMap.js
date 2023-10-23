@@ -43,6 +43,12 @@ async function initMap() {
             })
                 .then(response => response.json())
                 .then(responseJson => {
+                    sessionStorage.setItem('id', `${i}`)
+                    sessionStorage.setItem('title', `${responseJson[0]['Title']}`)
+                    sessionStorage.setItem('date', responseJson[0]['StartDate'] + ' → ' + responseJson[0]['EndDate'])
+                    sessionStorage.setItem('description', `${responseJson[0]['Description']}`)
+                    sessionStorage.setItem('price', responseJson[0]['Price'] + " PLN")
+
                     popupTitle.textContent = responseJson[0]['Title'];
                     popupDate.textContent = responseJson[0]['StartDate'] + ' → ' + responseJson[0]['EndDate'];
                     popupDescription.textContent = responseJson[0]['Description'];
@@ -58,6 +64,7 @@ async function initMap() {
             })
                 .then(response => response.json())
                 .then(responseJson => {
+                    sessionStorage.setItem('imageSrc', `${responseJson[0]['Image']}`);
                     popupImg.setAttribute('src', `${responseJson[0]['Image']}`);
                 })
 
