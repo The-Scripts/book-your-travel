@@ -29,21 +29,11 @@
     </header>
     <main>
         <header id="sub_menu">
-            <button id="upcoming">Nadchodzące</button>
-            <button id="previous">Zakończone</button>
+            <button id="all btnAll">Wszystkie</button>
+            <button id="upcoming btnNext">Nadchodzące</button>
+            <button id="previous btnPrev">Zakończone</button>
         </header>
         <section>
-            <!-- <div class="trip">
-                <img src="" alt="">
-                <div class="content">
-                    <h3 class="title"></h3>
-                    <hr>
-                    <p class="trip_date"></p>
-                </div>
-                <div class="description">
-                    
-                </div>
-            </div> -->
             <?php
             $mysqli = new mysqli("localhost", "root", "", "db");
 
@@ -76,15 +66,15 @@
                 echo '</div>';
                 echo '<div class="content">';
                 echo '<h3 class="title">' . $title . '</h3>';
-                echo '<p class="trip_date">' . $start_sf_date . ' - ' . $end_sf_date . '</p>';
+                echo '<p class="trip_date">' . $start_sf_date . ' - ' . $end_sf_date;
                 if ($data_porownywana > $dzisiaj) {
-                    echo "<p class='tag'>Nadchodzące</p>";
+                    echo "<span class='tag'>Nadchodzące</span>";
                 } elseif ($data_porownywana < $dzisiaj) {
-                    echo "<p class='tag'>Ukończone</p>";
+                    echo "<span class='tag'>Ukończone</span>";
                 } else {
-                    echo "<p class='tag' class='today'>Nadchodzące</p>";
+                    echo "<span class='tag' class='today'>Nadchodzące</span>";
                 }
-                echo '</div>';
+                echo '</p></div>';
                 echo '<div class="description">';
                 echo $description;
                 echo '</div></div>';
@@ -98,5 +88,6 @@
     <footer>
         <p>Stronę stworzono w 2023r.</p><p><a href="#top">Do poczatku strony</a></p>
     </footer>
+    <script src="../src/js/dashboard.js"></script>
     </body>
 </html>
