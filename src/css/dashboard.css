@@ -66,6 +66,16 @@ main, section {
     height: 600px;
 }
 
+.tag{
+    padding: 3px 8px 3px;
+    margin: 0 2px;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 600;
+    background-color: var(--alt);
+    border-radius: 100px;
+}
+
 .trip h3 {
     font-size: 20px;
     line-height: 15px;
