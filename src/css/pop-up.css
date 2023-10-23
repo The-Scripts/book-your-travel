@@ -1,3 +1,10 @@
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #section-map {
     position: relative;
 }
@@ -39,10 +46,6 @@ section img {
 #pop-up-price {
     width: 20%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     background-color: var(--main);
     border-radius: 0 15px 15px 0;
 }
@@ -68,4 +71,8 @@ section img {
     margin: 5px 0 4px 15px;
     font-size: 16px;
     text-overflow: ellipsis;
+}
+
+#book-travel {
+    width: 80%;
 }

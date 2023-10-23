@@ -10,6 +10,7 @@
 	
 	<link href="src/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="src/css/pop-up.css">
+    <link rel="stylesheet" href="src/css/submit-book.css">
 </head>
 <body id="top" style="overflow: auto;">
     <header>
@@ -28,6 +29,9 @@
         <section id="banner">
             <img src="res/img/banner.png" alt="baner">
         </section>
+        <section id="submit-book-sect">
+            
+        </section>
         <section id="section-map">
             <div id="map"></div>
             <section id="pop-up" class="hide">
@@ -40,7 +44,11 @@
                     <p id="description-para-pop-up">City</p>
                 </article>
                 <article id="pop-up-price">
-                    <p id="price-value-pop-up" class="price">1500 PLN</p>
+                    <form action="" method="post">
+                        <p id="price-value-pop-up" class="price">1500 PLN</p>
+
+                        <input id="book-travel" type="submit" value="Book">
+                    </form>
                 </article>
             </section>
         </section>
