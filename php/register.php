@@ -3,7 +3,7 @@
 $mysqli = new mysqli("localhost", "root", "", "db");
 
 if ($mysqli->connect_error) {
-    die("Connection failed: " . $mysqli->connect_error);
+    die("Błąd połączenia z bazą danych " . $mysqli->connect_error);
 }
 
 // Get user input
@@ -13,7 +13,7 @@ $repeat_password = $_POST["check_pass"];
 
 // Check if the email is valid
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    die("Invalid email address.");
+    die("Nieprawidłowy adres email.");
 }
 
 // Check if the email already exists in the database
@@ -29,21 +29,21 @@ for($i = 0; $i < $num_of_email; $i++){
 }
 
 if ($email_count > 0) {
-    die("Email already exists. Please use a different email address.");
+    die("Podany email już istnieje. Proszę użyj innego maila.");
 }
 
 // Check if the password and repeated password match
 if ($password !== $repeat_password) {
-    die("Passwords do not match.");
+    die("Hasła nie pasują do siebie");
 }
 
 // Check if the password meets certain criteria (e.g., at least 8 characters, including numbers, uppercase, and lowercase letters)
 if (strlen($password) < 8 || !preg_match("/[0-9]/", $password) || !preg_match("/[a-z]/", $password) || !preg_match("/[A-Z]/", $password)) {
-    die("Password must meet the following criteria:<br>
-        - At least 8 characters in length<br>
-        - Contains at least one digit (0-9)<br>
-        - Contains at least one lowercase letter (a-z)<br>
-        - Contains at least one uppercase letter (A-Z)");
+    die("Hasło musi spełniać następujące kryteria:<br>
+        - Co najmniej 8 znaków długości<br>
+        - Musi zawierać przynajmniej jedną cyfrę (0-9)<br>
+        - Musi zawierać przynajmniej jedną małą literę (a-z)<br>
+        - Musi zawierać przynajmniej jedną wielką literę (A-Z)");
 }
 
 
@@ -56,9 +56,9 @@ $stmt = $mysqli->prepare($sql);
 $stmt->bind_param("ss", $email, $hashed_password);
 
 if ($stmt->execute()) {
-    echo "Registration successful!";
+    echo "Rejestracja udana!";
 } else {
-    echo "Registration failed: " . $stmt->error;
+    echo "Rejestracja nie powiodła się: " . $stmt->error;
 }
 
 // Close the database connection
