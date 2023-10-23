@@ -43,7 +43,7 @@ button:active {
     gap: 20px;
 }
 
-#upcoming, #previous, #all{
+#btnAll, #btnPrev, #btnNext {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;

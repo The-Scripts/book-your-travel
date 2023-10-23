@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function showAllTrips() {
         trips.forEach((trip) => {
-            trip.parentElement.style.display = "block";
+            trip.parentElement.style.display = "flex";
         });
     }
 
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
         trips.forEach((trip) => {
             const tripDate = trip.querySelector(".tag").textContent.toLowerCase();
             if (tripDate.includes(dateOfTrip)) {
-                trip.parentElement.style.display = "block";
+                trip.parentElement.style.display = "flex";
             } else {
                 trip.parentElement.style.display = "none";
             }

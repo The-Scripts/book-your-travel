@@ -29,9 +29,9 @@
     </header>
     <main>
         <header id="sub_menu">
-            <button id="all btnAll">Wszystkie</button>
-            <button id="upcoming btnNext">Nadchodzące</button>
-            <button id="previous btnPrev">Zakończone</button>
+            <button id="btnAll">Wszystkie</button>
+            <button id="btnNext">Nadchodzące</button>
+            <button id="btnPrev">Zakończone</button>
         </header>
         <section>
             <?php
@@ -59,7 +59,7 @@
 
                 $dzisiaj = new DateTime();
                 $data_porownywana = new DateTime($trip_start);
-
+                echo '<section>';
                 echo '<div class="trip">';
                 echo '<div class="photo">';
                 echo '<img src="' . $photo_url . '" alt="' . $title . '">';
@@ -77,7 +77,7 @@
                 echo '</p></div>';
                 echo '<div class="description">';
                 echo $description;
-                echo '</div></div>';
+                echo '</div></div></section>';
             }
 
             $mysqli->close();
