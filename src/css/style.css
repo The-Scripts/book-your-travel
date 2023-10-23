@@ -192,15 +192,15 @@ td {
 ::-webkit-scrollbar-thumb{
 	background: #757885;
 	border-radius: 100vw;
-	opacity: 0%;
+	opacity: 0;
 }
 ::-webkit-scrollbar-thumb:hover{
 	background: #858896;
 }
 @supports (scrollbar-color: red blue){
 	*{
-		scrollbar-color: #757885;
-		scrollbar-width: 12px;
+		scrollbar-color: #757885 #757885;
+		scrollbar-width: thin;
 		/* scrollbar-color: silver #878787; */
 	}
 }
