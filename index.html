@@ -23,19 +23,25 @@
     </section>
     <header>
         <div id="logo">
-            <img src="res/img/logo.png" alt="Logo Book your travel">
+            <a href="#"><img src="res/img/logo.png" alt="Logo Book your travel"></a>
         </div>
         <nav>
 			<ol>
 				<li><a id="current" href="#">Strona główna</a></li>
-				<li><a href="src/html/login.html">Mój profil</a></li>
-				<li><a href="src/html/register.html">Rejestracja</a></li>
+				<li><a href="src/html/login.php">Mój profil</a></li>
+				<li><a href="src/html/register.php">Rejestracja</a></li>
 			</ol>
 		</nav>
     </header>
     <main>
-        <section id="banner">
-            <img src="res/img/banner.png" alt="baner">
+        <section id="submit-book-sect" class="hide">
+            <h1 id="submit-book-title">Title</h1>
+            <p id="submit-book-date">Date</p>
+            <img src="res/img/logo.png" alt="Image">
+            <p id="submit-book-description">Description</p>
+            <form action="" method="post">
+                <input type="submit" value="Book">
+            </form>
         </section>
         <section id="section-map">
             <div id="map"></div>

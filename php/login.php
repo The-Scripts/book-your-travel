@@ -3,14 +3,15 @@ session_start();
 $mysqli = new mysqli("localhost", "root", "", "db");
 
 if ($mysqli->connect_error) {
-    die("Connection failed: " . $mysqli->connect_error);
+    die("Błąd połączenia z bazą danych " . $mysqli->connect_error);
 }
 
-$email = $_POST["login"];
-$password = $_POST["password"];
+@$email = $_POST["login"];
+@$password = $_POST["password"];
 
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    die("Invalid email address.");
+    //header('Location: ../src/html/login.html');
+    die("Niepoprawny adres email.");
 }
 
 $retrieve_password_query = "SELECT ID, Email, Password FROM users WHERE Email = ?";
@@ -29,10 +30,12 @@ if ($stmt->num_rows == 1) {
 
         header("Location: dashboard.php");
     } else {
-        die("Incorrect password.");
+        //header('Location: ../src/html/login.html');
+        die("Niepoprawne hasło.");
     }
 } else {
-    die("Email not found. Please register if you don't have an account.");
+    //header('Location: ../src/html/login.html');
+    die("Nie znaleziono emaila. Proszę zarejestruj się, jeżeli nie masz stworzonego konta.");
 }
 
 // Close the database connection
