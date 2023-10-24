@@ -60,14 +60,6 @@ a:hover {
     color: var(--a);
 }
 
-header {
-    transition: all 0.5s;
-}
-
-main {
-    transition: all 0.5s;
-}
-
 #current {
     text-decoration: none;
     color: var(--a);
@@ -119,7 +111,6 @@ footer {
     color: var(--bgc);
     text-align: center;
     padding: 10px 0;
-    transition: all 0.5s;
 }
 
 #back_form {
@@ -189,10 +180,6 @@ td {
 
 .hide {
     display: none !important;
-}
-
-.blur {
-    filter: blur(10px);
 }
 
 ::-webkit-scrollbar{
