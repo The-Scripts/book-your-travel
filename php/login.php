@@ -6,8 +6,8 @@ if ($mysqli->connect_error) {
     die("Błąd połączenia z bazą danych " . $mysqli->connect_error);
 }
 
-$email = $_POST["login"];
-$password = $_POST["password"];
+@$email = $_POST["login"];
+@$password = $_POST["password"];
 
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     //header('Location: ../src/html/login.html');

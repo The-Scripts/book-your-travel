@@ -33,6 +33,14 @@ button:active {
     background-color: var(--altbgc);
 }
 
+#logout{
+    color: #e33443;
+}
+
+#logout:hover{
+    color: #e35434;
+}
+
 #sub_menu {
     width: 100%;
     display: flex;
