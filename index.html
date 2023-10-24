@@ -13,6 +13,14 @@
     <link rel="stylesheet" href="src/css/submit-book.css">
 </head>
 <body id="top" style="overflow: auto;">
+    <section id="submit-book-sect" class="hide">
+        <h1 id="submit-book-title">Title</h1>
+        <p id="submit-book-date">Date</p>
+        <img id="submit-book-img" src="res/img/logo.png" alt="Image">
+        <p id="submit-book-description">Description</p>
+        <button id="cancel-submit">X</button>
+        <button id="submit-book-submit">Rezerwuj</button>
+    </section>
     <header>
         <div id="logo">
             <a href="#"><img src="res/img/logo.png" alt="Logo Book your travel"></a>
@@ -48,7 +56,7 @@
                 </article>
                 <article id="pop-up-price">
                         <p id="price-value-pop-up" class="price">1500 PLN</p>
-                        <button>Book</button>
+                        <button>Rezerwuj</button>
                 </article>
             </section>
         </section>
@@ -56,6 +64,7 @@
     <footer>
         <p>Stronę stworzono w 2023r.</p><p><a href="#top">Do poczatku strony</a></p>
     </footer>
+    <script src="src/js/booking.js"></script>
     <script src="src/js/map/initMap.js"></script>
     <script src="src/js/map/MapConfig.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArOqv9NG801HCf95yDLXh-YD0mxpASzhA&callback=initMap" async defer></script>

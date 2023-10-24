@@ -75,3 +75,11 @@
 #book-travel {
     width: 80%;
 }
+
+#cancel-submit {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+}
