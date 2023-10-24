@@ -10,21 +10,44 @@ const main = document.querySelector('main');
 const header = document.querySelector('header');
 const footer = document.querySelector('footer');
 
+function cancelSubmit() {
+    submitSect.classList.add('hide');
+    main.classList.remove('blur');
+    header.classList.remove('blur');
+    footer.classList.remove('blur');
+}
+
 moreInfoBtn.addEventListener('click', () => {
     submitSect.classList.remove('hide');
     title.textContent = sessionStorage.getItem('title');
     date.textContent = sessionStorage.getItem('date');
     img.src = sessionStorage.getItem('imageSrc');
     description.textContent = sessionStorage.getItem('description');
-    submitBtn.value = `Zarezerwuj za ${sessionStorage.getItem('price')}`;
+    submitBtn.textContent = `Zarezerwuj za ${sessionStorage.getItem('price')}`;
     main.classList.add('blur');
     header.classList.add('blur');
     footer.classList.add('blur');
 })
 
-cancel.addEventListener('click', () => {
-    submitSect.classList.add('hide');
-    main.classList.remove('blur');
-    header.classList.remove('blur');
-    footer.classList.remove('blur');
+cancel.addEventListener('click', cancelSubmit)
+
+submitBtn.addEventListener('click', () => {
+    console.log(sessionStorage.getItem('id'))
+    fetch('../../../php/book.php', {
+        method: 'POST',
+        body:JSON.stringify({id: `${sessionStorage.getItem('id')}`}),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+        .then(response => response.json())
+        .then(responseJson => {
+            if (responseJson[0]['status'] === 'true') {
+                submitBtn.textContent = 'Udało się zarezerwować tą wycieczkę! Dziękujemy!';
+                setTimeout(cancelSubmit, 2000);
+            } else {
+                submitBtn.textContent = 'Najpierw zaloguj się!';
+                setTimeout(cancelSubmit, 2000);
+            }
+        })
 })
