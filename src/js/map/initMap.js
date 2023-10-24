@@ -31,7 +31,7 @@ async function initMap() {
                 position: {lat: parseFloat(markersData[i].Latitude), lng: parseFloat(markersData[i].Longitude)},
                 map: map,
                 content: marker,
-                title: `${i + 1}`
+                title: `${i+1}`
             });
 
             markers[i].addListener('click', async evt => {
