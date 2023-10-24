@@ -178,6 +178,34 @@ td {
     text-align: right;
 }
 
+.error, .corre {
+    font-size: 20px;
+    margin: 220px auto;
+    min-width: 280px;
+    max-width: 400px;
+    height: auto;
+    padding: 15px 10px 16px 10px;
+    text-align: center;
+    color: var(--bgc);
+    border-radius: 10px;
+}
+
+.error {
+    background-color: #de3a3a;
+    border: 3px solid #bc0000;
+}
+
+.corre {
+    background-color: #56cc23;
+    border: 3px solid #2b9900;
+}
+
+.error ol li {
+    font-size: 16px;
+    text-align: left;
+    margin-left: 15px;
+}
+
 .hide {
     display: none !important;
 }

@@ -73,6 +73,7 @@
 
                 $dzisiaj = new DateTime();
                 $data_porownywana = new DateTime($trip_start);
+                
                 echo '<section>';
                 echo '<div class="trip">';
                 echo '<div class="photo">';
