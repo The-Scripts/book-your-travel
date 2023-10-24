@@ -28,23 +28,23 @@ async function initMap() {
             marker.innerHTML = `${markersData[i].Title} <span class="price">${markersData[i].Price} PLN</span><br>
                             ${markersData[i].StartDate} → ${markersData[i].EndDate}`;
             markers[i] = new AdvancedMarkerElement({
-                position: { lat: parseFloat(markersData[i].Latitude), lng: parseFloat(markersData[i].Longitude) },
+                position: {lat: parseFloat(markersData[i].Latitude), lng: parseFloat(markersData[i].Longitude)},
                 map: map,
                 content: marker,
-                title: `${i+1}`
+                title: `${i + 1}`
             });
 
             markers[i].addListener('click', async evt => {
                 fetch('../../../php/popUp.php', {
                     method: 'POST',
-                    body: JSON.stringify({id: `${i+1}`}),
+                    body: JSON.stringify({id: `${i + 1}`}),
                     headers: {
                         'Content-Type': 'application/json'
                     }
                 })
                     .then(response => response.json())
                     .then(responseJson => {
-                        sessionStorage.setItem('id', `${i+1}`)
+                        sessionStorage.setItem('id', `${i + 1}`)
                         sessionStorage.setItem('title', `${responseJson[0]['Title']}`)
                         sessionStorage.setItem('date', responseJson[0]['StartDate'] + ' → ' + responseJson[0]['EndDate'])
                         sessionStorage.setItem('description', `${responseJson[0]['Description']}`)
@@ -58,7 +58,7 @@ async function initMap() {
 
                 fetch('../../../php/popUpImage.php', {
                     method: 'POST',
-                    body:JSON.stringify({id: `${i+1}`}),
+                    body: JSON.stringify({id: `${i + 1}`}),
                     headers: {
                         'Content-Type': 'application/json'
                     }
@@ -76,9 +76,7 @@ async function initMap() {
                 markers[i].zIndex = 1;
 
 
-
             })
         }
-
     }
  }
