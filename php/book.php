@@ -6,7 +6,8 @@ if (isset($_SESSION['user_id'])) {
     $data = json_decode(file_get_contents("php://input"), true);
     $conn->query("INSERT INTO bookedtravels (UserID, OfferID) values ({$_SESSION['user_id']}, {$data['id']})");
     header('Content-Type: application/json');
-    echo json_encode("{$data['id']}");
+    echo json_encode(["status" => "true"]);
 } else {
     header('Content-Type: application/json');
+    echo json_encode($_SESSION);
 }

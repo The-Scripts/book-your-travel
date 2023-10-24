@@ -32,22 +32,25 @@ moreInfoBtn.addEventListener('click', () => {
 cancel.addEventListener('click', cancelSubmit)
 
 submitBtn.addEventListener('click', () => {
-    console.log(sessionStorage.getItem('id'))
     fetch('../../../php/book.php', {
         method: 'POST',
-        body:JSON.stringify({id: `${sessionStorage.getItem('id')}`}),
+        body: JSON.stringify({ "id": `${sessionStorage.getItem('id')}` }),
         headers: {
             'Content-Type': 'application/json'
         }
     })
         .then(response => response.json())
         .then(responseJson => {
-            if (responseJson[0]['status'] === 'true') {
+            if (responseJson['status'] === 'true') {
+                console.log(responseJson['status']);
                 submitBtn.textContent = 'Udało się zarezerwować tą wycieczkę! Dziękujemy!';
                 setTimeout(cancelSubmit, 2000);
             } else {
+                console.log(responseJson['status']);
                 submitBtn.textContent = 'Najpierw zaloguj się!';
                 setTimeout(cancelSubmit, 2000);
             }
         })
-})
+});
+
+

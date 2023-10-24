@@ -43,7 +43,7 @@ async function initMap() {
             })
                 .then(response => response.json())
                 .then(responseJson => {
-                    sessionStorage.setItem('id', `${i}`)
+                    sessionStorage.setItem('id', `${i+1}`)
                     sessionStorage.setItem('title', `${responseJson[0]['Title']}`)
                     sessionStorage.setItem('date', responseJson[0]['StartDate'] + ' → ' + responseJson[0]['EndDate'])
                     sessionStorage.setItem('description', `${responseJson[0]['Description']}`)
