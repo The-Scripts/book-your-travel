@@ -1,8 +1,15 @@
+<?php
+    session_start();
+
+    if (isset($_SESSION['user_id']) && isset($_SESSION['user_email'])){
+        header('Location: ../../php/dashboard.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Book your travel - Rejestrowanie</title>
+    <title>Book your travel - Logowanie</title>
 
     <meta name="description" content="Travel website">
 	<meta name="keywords" content="travel, booking, map">
@@ -18,29 +25,25 @@
         <nav>
 			<ol>
 				<li><a href="../../index.html">Strona główna</a></li>
-				<li><a href="login.html">Mój profil</a></li>
-				<li><a id="current" href="#">Rejestracja</a></li>
+				<li><a id="current" href="#">Mój profil</a></li>
+				<li><a href="register.php">Rejestracja</a></li>
 			</ol>
 		</nav>
     </header>
     <main>
         <section id="back_form">
-            <form action="../../php/register.php" method="post">
+            <form action="../../php/login.php" method="post">
                 <fieldset>
-                    <legend>Rejestracja</legend>
+                    <legend>Logowanie</legend>
 
                     <table>
                         <tr>
                             <td><label for="login">Email: </label></td>
-                            <td><input type="email" name="login" id="login"></td>
+                            <td><input type="text" name="login" id="login"></td>
                         </tr>
                         <tr>
                             <td><label for="password">Hasło: </label></td>
                             <td><input type="password" name="password" id="password"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="check_pass">Powtórz hasło: </label></td>
-                            <td><input type="password" name="check_pass" id="check_pass"></td>
                         </tr>
                         <tr>
                             <td></td>
@@ -48,7 +51,6 @@
                         </tr>
                     </table>
                 </fieldset>
-                <!-- <script src="../js/FormCheck.js"></script> -->
             </form>
         </section>
     </main>

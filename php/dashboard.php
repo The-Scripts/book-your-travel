@@ -2,7 +2,7 @@
     session_start();
 
     if(!(isset($_SESSION['user_id'])) && !($_SESSION['user_email'])){
-        header("Location: login.php");
+        header("Location: ../src/html/login.php");
     }
 ?>
 <!DOCTYPE html>
@@ -27,7 +27,17 @@
 			<ol>
 				<li><a href="../index.html">Strona główna</a></li>
 				<li><a id="current" href="#">Mój profil</a></li>
-				<li><a href="../src/html/register.html">Rejestracja</a></li>
+				<li><a id="logout" href="dashboard.php?action=logout">Wyloguj</a></li>
+                <?php
+                    if (isset($_GET['action']) && $_GET['action'] === 'logout') {
+
+                        unset($_SESSION['user_id']);
+                        unset($_SESSION['user_email']);
+                        echo "Zostałeś wylogowany.";
+
+                        header('Location: ../src/html/login.php');
+                    }
+                ?>
 			</ol>
 		</nav>
     </header>
