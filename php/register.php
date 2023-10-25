@@ -81,9 +81,6 @@ $mysqli = new mysqli("localhost", "root", "", "db");
         }
     ?>
     </main>
-    <footer>
-        <p>Stronę stworzono w 2023r.</p><p><a href="#top">Do poczatku strony</a></p>
-    </footer>
 </body>
 </html>
 
