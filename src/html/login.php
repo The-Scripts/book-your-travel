@@ -16,6 +16,7 @@
 	<meta name="author" content="Patryk Ruzicki, Łukasz Stępień">
 	
 	<link href="../css/style.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
 </head>
 <body id="top">
     <header>

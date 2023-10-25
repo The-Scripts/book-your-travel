@@ -17,6 +17,7 @@
 	
 	<link href="../src/css/style.css" rel="stylesheet">
     <link href="../src/css/dashboard.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
 </head>
 <body id="top" style="overflow: auto;">
     <header>
