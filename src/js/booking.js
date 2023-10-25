@@ -22,7 +22,7 @@ moreInfoBtn.addEventListener('click', () => {
     title.textContent = sessionStorage.getItem('title');
     date.textContent = sessionStorage.getItem('date');
     img.src = sessionStorage.getItem('imageSrc');
-    description.textContent = sessionStorage.getItem('description');
+    description.innerHTML = sessionStorage.getItem('description');
     submitBtn.textContent = `Zarezerwuj za ${sessionStorage.getItem('price')}`;
     main.classList.add('blur');
     header.classList.add('blur');

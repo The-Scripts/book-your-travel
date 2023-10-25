@@ -1,13 +1,14 @@
 #submit-book-sect {
-    left: 25%;
-    top: 10%;
-    z-index: 1;
     position: fixed;
+    left: 25%;
+    top: 5%;
     width: 50%;
-    height: 80%;
+    max-height: 90%; /* Set a maximum height to limit the scrollable area */
+    overflow-y: auto; /* Use "auto" for vertical scrolling */
     background-color: var(--map);
     border-radius: 10px;
     color: white;
+    z-index: 2;
 }
 
 #submit-book-sect img {
@@ -26,7 +27,7 @@
 #submit-book-submit {
     margin: 0;
     padding: 0;
-    position: absolute;
+    position: sticky;
     width: 90%;
     left: 5%;
     bottom: 2%;

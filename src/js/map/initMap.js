@@ -52,7 +52,7 @@ async function initMap() {
 
                         popupTitle.textContent = responseJson[0]['Title'];
                         popupDate.textContent = responseJson[0]['StartDate'] + ' → ' + responseJson[0]['EndDate'];
-                        popupDescription.textContent = responseJson[0]['Description'];
+                        popupDescription.innerHTML = responseJson[0]['Description'];
                         popupPrice.textContent = responseJson[0]['Price'] + " PLN";
                     })
 
