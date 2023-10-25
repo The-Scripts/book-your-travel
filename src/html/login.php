@@ -26,6 +26,7 @@
         <nav>
 			<ol>
 				<li><a href="../../index.html">Strona główna</a></li>
+                <li><a href="../../contact.html">Kontakt</a></li>
 				<li><a id="current" href="#">Mój profil</a></li>
 				<li><a href="register.php">Rejestracja</a></li>
 			</ol>

@@ -135,15 +135,6 @@ main, section {
     margin-bottom: 16px;
 }
 
-footer {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
-    padding: 10px 20px;
-    gap: 20px;
-}
-
 .description::-webkit-scrollbar {
     width: 7px;
 }

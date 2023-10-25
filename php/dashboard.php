@@ -27,6 +27,7 @@
         <nav>
 			<ol>
 				<li><a href="../index.html">Strona główna</a></li>
+                <li><a href="../contact.html">Kontakt</a></li>
 				<li><a id="current" href="#">Mój profil</a></li>
 				<li><a id="logout" href="dashboard.php?action=logout">Wyloguj</a></li>
                 <?php

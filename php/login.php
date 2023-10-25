@@ -22,6 +22,7 @@ $mysqli = new mysqli("localhost", "root", "", "db");
         <nav>
 			<ol>
 				<li><a href="../index.html">Strona główna</a></li>
+                <li><a href="../contact.html">Kontakt</a></li>
 				<li><a href="../src/html/login.php">Mój profil</a></li>
 				<li><a href="../src/html/register.php">Rejestracja</a></li>
 			</ol>

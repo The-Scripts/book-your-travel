@@ -19,6 +19,7 @@
         <nav>
 			<ol>
 				<li><a href="../../index.html">Strona główna</a></li>
+                <li><a href="../../contact.html">Kontakt</a></li>
 				<li><a href="login.php">Mój profil</a></li>
 				<li><a id="current" href="#">Rejestracja</a></li>
 			</ol>
